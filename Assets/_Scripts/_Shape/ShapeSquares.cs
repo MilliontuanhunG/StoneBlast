@@ -1,0 +1,28 @@
+using UnityEngine;
+using UnityEngine.UI;
+
+public class ShapeSquares : MonoBehaviour
+{
+    [Header("Occupied State")]
+    public Image occupiedImage;
+
+    void Start()
+    {
+        occupiedImage.gameObject.SetActive(false);    
+    }
+
+    public void DeactivateShape()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = false;
+        gameObject.SetActive(false);    
+    }
+    public void ActivateShape()
+    {
+        gameObject.GetComponent<BoxCollider2D>().enabled = true;
+        gameObject.SetActive(true);
+    }
+    public void SetOccupied()
+    {
+
+    }
+}
